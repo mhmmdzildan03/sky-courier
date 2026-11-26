@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sky Courier — Island Mail Run</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="game"></div>
+
+  <!-- Title screen -->
+  <div id="title-screen" class="overlay">
+    <div class="panel">
+      <div class="eyebrow">MAKE.FUN &middot; BEST FLIGHT GAME</div>
+      <h1>SKY COURIER</h1>
+      <div class="subtitle">Island Mail Run</div>
+      <p class="tagline">Fly the little mail plane across a sunset archipelago.
+        Thread the golden rings, catch the parcels, dodge the storm —
+        and land her safe on every island strip.</p>
+      <div class="controls">
+        <span><b>&uarr; / &darr;</b> or <b>W / S</b> steer</span>
+        <span><b>Shift / Space</b> boost</span>
+        <span><b>Mouse / touch</b> drag to steer</span>
+        <span><b>P</b> pause &nbsp; <b>M</b> mute</span>
+      </div>
+      <button id="btn-fly" class="cta">Take off &nbsp;&rsaquo;</button>
+      <div class="foot">3 island legs &middot; rings build your combo &middot; fuel is life</div>
+    </div>
+  </div>
+
+  <!-- Leg banner -->
+  <div id="banner" class="banner hidden"></div>
+
+  <!-- Pause screen -->
+  <div id="pause-screen" class="overlay hidden">
+    <div class="panel small">
+      <h2>Paused</h2>
+      <p>Take a breath, pilot. The sunset isn&rsquo;t going anywhere.</p>
+      <button id="btn-resume" class="cta">Resume &nbsp;&rsaquo;</button>
+    </div>
+  </div>
+
+  <!-- End screen -->
+  <div id="end-screen" class="overlay hidden">
+    <div class="panel">
+      <div class="eyebrow" id="end-eyebrow">RUN COMPLETE</div>
+      <h2 id="end-title">Mail delivered!</h2>
+      <p id="end-text" class="tagline"></p>
+      <div id="end-stats" class="stats"></div>
+      <button id="btn-again" class="cta">Fly again &nbsp;&rsaquo;</button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<script src="vendor/pixi.min.js"></script>
+<script src="vendor/matter.min.js"></script>
+<script src="vendor/anime.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
